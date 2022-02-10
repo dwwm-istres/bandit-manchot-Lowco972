@@ -4,71 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/app.css">
   <title>Bandit Manchot</title>
-  
+
 </head>
 
 <body>
-  <div class="">
-    <div class="">
-      <div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col">
         <!-- <h1 class="text-center">Play it again Sam !</h1> -->
-        <img src="img/bandeau.jpg" alt="" class="img-fluid">
+        <img src="img/bandeau.jpg" alt="Des joueurs de casino" class="img-fluid max-width: 100% heigth: auto">
       </div>
     </div>
-    <div class="">
-      <div class="">
-        <div id="error-msg" class="">
+    <div class="row">
+      <div class="col mt-3">
+        <div id="error-msg" class="alert alert-danger" role="alert">
           Si vous voyez ce message, c'est que JavaScript ne fonctionne pas sur votre machine !
         </div>
       </div>
     </div>
-    <div class="">
-      <div class="">
-        <div class="">
-          <div class="">
-            <img id="img1" src="https://fakeimg.pl/400x400/?text=img1" alt="" class="">
+    <div class="row mt-5">
+      <div class="col-9">
+        <div class="row">
+          <div class="col-4">
+            <img id="img1" src="./img/diamond.png" alt="Un beau diamant" class="img-thumbnail">
           </div>
-          <div class="">
-            <img id="img2" src="https://fakeimg.pl/400x400/?text=img2" alt="" class="">
+          <div class="col-4">
+            <img id="img2" src="./img/diamond.png" alt="Un beau diamant" class="img-thumbnail">
           </div>
-          <div class="">
-            <img id="img3" src="https://fakeimg.pl/400x400/?text=img3" alt="" class="">
+          <div class="col-4">
+            <img id="img3" src="./img/diamond.png" alt="Un beau diamant" class="img-thumbnail">
           </div>
         </div>
-        <div class="">
-          <div class="">
-            <div id="gain" class="">
-              <div class="">
+        <div class="row">
+          <div class="col">
+            <div id="gain" class="mt-4 border rounded col">
+              <div class="text-center mt-2 text-uppercase">
                 <h2>Gains</h2>
               </div>
-              <div class="">
-                <table class="">
+              <div class="py-3 text-center">
+                <table class="table table-warning text-uppercase">
                   <tbody>
                     <tr>
                       <td>3 identiques</td>
                       <td>
-                        <img src="https://fakeimg.pl/400x400/?text=img1" alt="">
-                        <img src="https://fakeimg.pl/400x400/?text=img1" alt="">
-                        <img src="https://fakeimg.pl/400x400/?text=img1" alt="">
+                        <img src="./img/heart.png" alt="Un beau coeur">
+                        <img src="./img/heart.png" alt="Un beau coeur">
+                        <img src="./img/heart.png" alt="Un beau coeur">
                       </td>
                       <td>10&nbsp;x&nbsp;la&nbsp;mise</td>
                     </tr>
                     <tr>
                       <td>2 identiques</td>
                       <td>
-                        <img src="https://fakeimg.pl/400x400/?text=img1" alt="">
-                        <img src="https://fakeimg.pl/400x400/?text=img1" alt="">
-                        <img src="https://fakeimg.pl/400x400/?text=img2" alt="">
+                        <img src="./img/horseshoe.png" alt="Un beau fer à cheval">
+                        <img src="./img/horseshoe.png" alt="Un beau fer à cheval">
+                        <img src="./img/cherry.png" alt="Une paire de cerise">
                       </td>
                       <td>2&nbsp;x&nbsp;la&nbsp;mise</td>
                     </tr>
                     <tr>
                       <td>tous&nbsp;différents</td>
                       <td>
-                        <img src="https://fakeimg.pl/400x400/?text=img1" alt="">
-                        <img src="https://fakeimg.pl/400x400/?text=img2" alt="">
-                        <img src="https://fakeimg.pl/400x400/?text=img3" alt="">
+                        <img src="./img/bell.png" alt="Une jolie cloche">
+                        <img src="./img/lemon.png" alt="Un beau citron">
+                        <img src="./img/seven.png" alt="Le sept de la chance">
                       </td>
                       <td>vous&nbsp;perdez&nbsp;:(</td>
                     </tr>
@@ -79,35 +82,35 @@
           </div>
         </div>
       </div>
-      <div class="">
-        <div id="solde" class="">
-          <div class="">
+      <div class="col-3 card">
+        <div id="solde" class="card-header ">
+          <div class="font-weight-bold text-uppercase text-center">
             <h2>Solde</h2>
           </div>
-          <div class="">
-            <div class="">
-              <input id="amount" type="text" class="" readonly>
-              <div class="">
-                <span class="">€</span>
+          <div class="mt-3 text-center">
+            <div class=" d-flex">
+              <input id="amount" type="text" class="border-0 pt-2 col-8 text-center" readonly value="50">
+              <div class="col-4">
+                <span class="border-left">€</span>
               </div>
             </div>
           </div>
         </div>
-        <div id="action" class="">
+        <div id="action" class="mt-3 card-header">
           <div class="">
-            <h2 class="">Actions</h2>
+            <h2 class="font-weight-bold text-uppercase text-center">Actions</h2>
           </div>
           <div class="">
-            <div class="">
+            <div class="text-center">
               Votre mise :
             </div>
-            <div class="">
-              <button id="bet-dec" class="">-</button>
-              <button id="bet" class="" disabled></button>
-              <button id="bet-inc" class="">+</button>
+            <div class=" btn-group d-flex mt-3">
+              <button id="bet-dec" class="btn btn-warning p-2">-</button>
+              <button id="bet" class="btn btn-warning  p-2" disabled>5</button>
+              <button id="bet-inc" class="btn btn-warning  p-2">+</button>
             </div>
-            <button id="reset" class="">RAZ</button>
-            <button id="play" class="">Jouer</button>
+            <button id="reset" class="btn btn-danger btn-block  p-2 mt-3">RAZ</button>
+            <button id="play" class="btn btn-success btn-block p-3 mt-4">Jouer</button>
           </div>
         </div>
       </div>
